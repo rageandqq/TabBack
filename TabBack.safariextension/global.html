@@ -3,14 +3,31 @@
 <head>
 <title>TabBack</title>
 <script>
+  /* Key Pressed/Released Array */
+  var keys = [];
+  /* Tabs Closed */
   var tabStack = new Array();
+
+  function keysPressed(e) {
+    console.log("Pressed key with keycode: " + e.keyCode);
+  }
+
+  function keysReleased(e) {
+    keys[e.keyCode] = false;
+  }
+
+  /* Tab Close event handler */
 	function closeHandler() {
 	  var url = safari.application.activeBrowserWindow.activeTab.url;
 	  if (url != undefined) {
       tabStack.push(url);
     }
   }
+  
+  /* Override event listeners, Define custom handlers */
 	safari.application.addEventListener("close", closeHandler, true);
+	window.addEventListener("keydown", keysPressed, false);
+	window.addEventListener("keyup", keysReleased, false);
 </script>
 </head>
 </html>
