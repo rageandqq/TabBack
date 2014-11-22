@@ -3,7 +3,14 @@
 <head>
 <title>TabBack</title>
 <script>
-
+  var tabStack = new Array();
+	function closeHandler() {
+	  var url = safari.application.activeBrowserWindow.activeTab.url;
+	  if (url != undefined) {
+      tabStack.push(url);
+    }
+  }
+	safari.application.addEventListener("close", closeHandler, true);
 </script>
 </head>
 </html>

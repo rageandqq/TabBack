@@ -1,3 +1,4 @@
 *.certSigningRequest
 *.swp
 *.cer
+*.plist
