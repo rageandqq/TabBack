@@ -18,7 +18,7 @@ When a listener on a page detects the Alt+Shift+T sequence, it fires an event to
 At this point, if there is a previously closed tab that can be opened, that tab is re-opened in the active window.
 
 ##Installation
-To install, simply open the proved [TabBack.safariextz](TabBack.safariextz) file with Safari, and let it work it's magic.  
+To install, simply download the [TabBack.safariextz](https://github.com/rageandqq/TabBack/blob/master/TabBack.safariextz?raw=true) file and open it with Safari, accept the permissions, and restart the browser.  
 After that, you're good to go!  
 
 ##Contribution
