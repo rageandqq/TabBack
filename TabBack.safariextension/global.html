@@ -7,13 +7,27 @@
   var keys = [];
   /* Tabs Closed */
   var tabStack = new Array();
+  /* Flag for whether a tab has been opened since last t-keyUp */
+  var flag = false;
 
-  function keysPressed(e) {
+	window.addEventListener("keydown", keyPressed, false);
+	window.addEventListener("keyup", keyReleased, false);
+
+  /* Key Press Handler */
+  function keyPressed(e) {
     console.log("Pressed key with keycode: " + e.keyCode);
+    keys[e.keyCode] = true;
+    if ((keys[91] || keys[93]) && keys[16] && keys[84] && !flag) {
+      flag = !flag;
+    }
   }
 
-  function keysReleased(e) {
+  /* Key Release Handler */
+   function keyReleased(e) {
     keys[e.keyCode] = false;
+    if (!keys[84] && flag) {
+      flag = !flag;
+    }
   }
 
   /* Tab Close event handler */
@@ -24,10 +38,8 @@
     }
   }
   
-  /* Override event listeners, Define custom handlers */
+  /* Override event listeners, define custom handlers */
 	safari.application.addEventListener("close", closeHandler, true);
-	window.addEventListener("keydown", keysPressed, false);
-	window.addEventListener("keyup", keysReleased, false);
 </script>
 </head>
 </html>
