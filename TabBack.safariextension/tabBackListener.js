@@ -1,3 +1,4 @@
+/* Copyright Sameer Chitley, 2014 */
 var keys = [];
 var flag = false;
 
