@@ -24,10 +24,15 @@
 	<key>Content</key>
 	<dict>
 		<key>Scripts</key>
-		<dict/>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>tabBackListener.js</string>
+			</array>
+		</dict>
 	</dict>
 	<key>Description</key>
-	<string>Get your Tab Back! CMD+SHIFT+T to re-open the last closed tab, multiple times.</string>
+	<string>Get your Tab Back! "Alt+Shift+T" to re-open the last closed tab, multiple times.</string>
 	<key>DeveloperIdentifier</key>
 	<string>R56TGDYQM6</string>
 	<key>ExtensionInfoDictionaryVersion</key>
