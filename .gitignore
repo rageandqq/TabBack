@@ -1,5 +1,4 @@
 *.certSigningRequest
 *.swp
 *.cer
-*.plist
 *.psd
