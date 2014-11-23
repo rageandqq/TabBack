@@ -4,22 +4,22 @@
 <head>
 <title>TabBack</title>
 <script>
-  var keys = [];
-  var tabStack = new Array();
-  var flag = false;
-  function messageHandler(msg) {
-    if (msg.name == 'TabBack-down' && tabStack.length > 0) {
-      safari.application.activeBrowserWindow.openTab().url = tabStack.pop();
-    }
+var keys = [];
+var tabStack = new Array();
+var flag = false;
+function messageHandler(msg) {
+  if (msg.name == 'TabBack-down' && tabStack.length > 0) {
+    safari.application.activeBrowserWindow.openTab().url = tabStack.pop();
   }
-	function closeHandler() {
-	  var url = safari.application.activeBrowserWindow.activeTab.url;
-	  if (url != undefined) {
-      tabStack.push(url);
-    }
+}
+function closeHandler() {
+  var url = safari.application.activeBrowserWindow.activeTab.url;
+  if (url != undefined) {
+    tabStack.push(url);
   }
-	safari.application.addEventListener('close', closeHandler, true);
-	safari.application.addEventListener('message', messageHandler, false);
+}
+safari.application.addEventListener('close', closeHandler, true);
+safari.application.addEventListener('message', messageHandler, false);
 </script>
 </head>
 </html>
