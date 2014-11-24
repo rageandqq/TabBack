@@ -19,7 +19,8 @@ function closeHandler() {
   }
 }
 safari.application.addEventListener('close', closeHandler, true);
-safari.application.addEventListener('message', messageHandler, false);
+safari.application.addEventListener('TabBack-down', messageHandler, false);
+    
 </script>
 </head>
 </html>
