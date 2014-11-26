@@ -47,5 +47,9 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Update Manifest URL</key>
+	<string>https://raw.githubusercontent.com/rageandqq/TabBack/master/Updates.plist</string>
+	<key>Website</key>
+	<string>http://rageandqq.github.io/TabBack/</string>
 </dict>
 </plist>
